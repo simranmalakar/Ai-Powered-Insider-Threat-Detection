@@ -1,0 +1,189 @@
+date,user,activity,device_name,device_type,file_tree
+2026-03-09 22:39:44,alice.johnson,USB Disconnect,USB_Device_93,External HDD,/media/usb8/data/
+2026-03-10 11:47:44,carol.white,USB Disconnect,USB_Device_74,SD Card,/media/usb9/data/
+2026-03-10 05:43:44,emma.davis,USB Disconnect,USB_Device_32,SD Card,/media/usb5/data/
+2026-03-09 22:45:44,alice.johnson,USB Connect,USB_Device_44,External HDD,/media/usb4/data/
+2026-03-10 10:28:44,frank.miller,USB Connect,USB_Device_67,SD Card,/media/usb6/data/
+2026-03-10 10:57:44,henry.anderson,CD Burn,USB_Device_78,External HDD,/media/usb2/data/
+2026-03-09 18:32:44,kate.jackson,USB Connect,USB_Device_96,CD/DVD,/media/usb3/data/
+2026-03-10 13:04:44,henry.anderson,External Drive Mount,USB_Device_70,External HDD,/media/usb1/data/
+2026-03-10 14:12:44,david.brown,External Drive Mount,USB_Device_87,SD Card,/media/usb6/data/
+2026-03-11 16:59:44,emma.davis,External Drive Mount,USB_Device_9,External HDD,/media/usb1/data/
+2026-03-11 16:43:44,david.brown,USB Connect,USB_Device_46,External HDD,/media/usb6/data/
+2026-03-11 16:45:44,john.smith,CD Burn,USB_Device_83,CD/DVD,/media/usb8/data/
+2026-03-11 14:57:44,alice.johnson,External Drive Mount,USB_Device_29,CD/DVD,/media/usb2/data/
+2026-03-11 08:02:44,iris.thomas,USB Connect,USB_Device_65,USB Flash Drive,/media/usb10/data/
+2026-03-11 02:41:44,henry.anderson,CD Burn,USB_Device_25,USB Flash Drive,/media/usb4/data/
+2026-03-12 11:55:44,jack.moore,CD Burn,USB_Device_30,CD/DVD,/media/usb7/data/
+2026-03-12 07:01:44,david.brown,External Drive Mount,USB_Device_4,CD/DVD,/media/usb8/data/
+2026-03-12 13:17:44,david.brown,External Drive Mount,USB_Device_88,SD Card,/media/usb6/data/
+2026-03-11 21:52:44,henry.anderson,External Drive Mount,USB_Device_21,USB Flash Drive,/media/usb5/data/
+2026-03-12 00:37:44,carol.white,External Drive Mount,USB_Device_82,USB Flash Drive,/media/usb6/data/
+2026-03-12 14:50:44,carol.white,CD Burn,USB_Device_95,SD Card,/media/usb10/data/
+2026-03-13 17:23:44,david.brown,External Drive Mount,USB_Device_76,CD/DVD,/media/usb2/data/
+2026-03-13 15:54:44,alice.johnson,USB Connect,USB_Device_1,SD Card,/media/usb6/data/
+2026-03-13 03:30:44,frank.miller,CD Burn,USB_Device_12,CD/DVD,/media/usb5/data/
+2026-03-14 16:31:44,emma.davis,USB Disconnect,USB_Device_56,SD Card,/media/usb8/data/
+2026-03-13 19:40:44,emma.davis,USB Disconnect,USB_Device_56,External HDD,/media/usb10/data/
+2026-03-14 01:08:44,david.brown,USB Connect,USB_Device_41,CD/DVD,/media/usb2/data/
+2026-03-14 10:07:44,frank.miller,CD Burn,USB_Device_66,USB Flash Drive,/media/usb8/data/
+2026-03-14 05:10:44,alice.johnson,CD Burn,USB_Device_3,USB Flash Drive,/media/usb10/data/
+2026-03-14 11:04:44,jack.moore,External Drive Mount,USB_Device_66,CD/DVD,/media/usb6/data/
+2026-03-13 20:43:44,carol.white,External Drive Mount,USB_Device_65,SD Card,/media/usb3/data/
+2026-03-15 05:58:44,iris.thomas,USB Disconnect,USB_Device_85,CD/DVD,/media/usb9/data/
+2026-03-15 12:04:44,kate.jackson,CD Burn,USB_Device_68,CD/DVD,/media/usb10/data/
+2026-03-15 10:44:44,henry.anderson,External Drive Mount,USB_Device_50,USB Flash Drive,/media/usb10/data/
+2026-03-15 04:15:44,bob.wilson,External Drive Mount,USB_Device_55,CD/DVD,/media/usb1/data/
+2026-03-15 02:48:44,david.brown,USB Connect,USB_Device_69,USB Flash Drive,/media/usb7/data/
+2026-03-14 19:09:44,jack.moore,External Drive Mount,USB_Device_48,USB Flash Drive,/media/usb2/data/
+2026-03-14 22:52:44,bob.wilson,External Drive Mount,USB_Device_48,External HDD,/media/usb8/data/
+2026-03-15 01:12:44,frank.miller,CD Burn,USB_Device_18,SD Card,/media/usb5/data/
+2026-03-15 06:16:44,iris.thomas,USB Connect,USB_Device_45,CD/DVD,/media/usb3/data/
+2026-03-15 13:50:44,alice.johnson,USB Connect,USB_Device_59,USB Flash Drive,/media/usb5/data/
+2026-03-16 18:09:44,emma.davis,USB Disconnect,USB_Device_66,USB Flash Drive,/media/usb9/data/
+2026-03-16 12:03:44,kate.jackson,CD Burn,USB_Device_67,CD/DVD,/media/usb8/data/
+2026-03-16 03:41:44,frank.miller,USB Disconnect,USB_Device_97,USB Flash Drive,/media/usb3/data/
+2026-03-17 14:05:44,grace.taylor,USB Connect,USB_Device_94,CD/DVD,/media/usb2/data/
+2026-03-17 10:14:44,iris.thomas,USB Connect,USB_Device_45,SD Card,/media/usb7/data/
+2026-03-16 20:52:44,emma.davis,USB Disconnect,USB_Device_78,CD/DVD,/media/usb7/data/
+2026-03-17 04:55:44,grace.taylor,USB Connect,USB_Device_7,USB Flash Drive,/media/usb6/data/
+2026-03-17 15:56:44,kate.jackson,External Drive Mount,USB_Device_7,USB Flash Drive,/media/usb9/data/
+2026-03-17 17:40:44,henry.anderson,External Drive Mount,USB_Device_62,External HDD,/media/usb1/data/
+2026-03-16 19:02:44,kate.jackson,USB Disconnect,USB_Device_14,CD/DVD,/media/usb4/data/
+2026-03-16 22:30:44,david.brown,CD Burn,USB_Device_81,SD Card,/media/usb1/data/
+2026-03-18 09:26:44,frank.miller,External Drive Mount,USB_Device_31,External HDD,/media/usb1/data/
+2026-03-18 02:46:44,henry.anderson,USB Connect,USB_Device_60,CD/DVD,/media/usb6/data/
+2026-03-18 00:49:44,grace.taylor,USB Connect,USB_Device_21,CD/DVD,/media/usb3/data/
+2026-03-18 12:31:44,john.smith,USB Disconnect,USB_Device_42,CD/DVD,/media/usb1/data/
+2026-03-19 14:50:44,iris.thomas,CD Burn,USB_Device_41,CD/DVD,/media/usb10/data/
+2026-03-19 05:57:44,carol.white,USB Disconnect,USB_Device_85,USB Flash Drive,/media/usb2/data/
+2026-03-19 06:19:44,emma.davis,External Drive Mount,USB_Device_34,External HDD,/media/usb5/data/
+2026-03-19 08:02:44,henry.anderson,External Drive Mount,USB_Device_25,USB Flash Drive,/media/usb10/data/
+2026-03-20 11:58:44,jack.moore,USB Disconnect,USB_Device_93,CD/DVD,/media/usb10/data/
+2026-03-19 23:35:44,emma.davis,External Drive Mount,USB_Device_46,SD Card,/media/usb5/data/
+2026-03-20 09:51:44,bob.wilson,External Drive Mount,USB_Device_77,SD Card,/media/usb4/data/
+2026-03-20 04:55:44,carol.white,External Drive Mount,USB_Device_9,CD/DVD,/media/usb2/data/
+2026-03-19 23:43:44,jack.moore,USB Connect,USB_Device_66,SD Card,/media/usb10/data/
+2026-03-19 20:41:44,john.smith,USB Disconnect,USB_Device_37,USB Flash Drive,/media/usb5/data/
+2026-03-20 02:39:44,henry.anderson,CD Burn,USB_Device_24,External HDD,/media/usb10/data/
+2026-03-20 15:57:44,emma.davis,External Drive Mount,USB_Device_8,External HDD,/media/usb10/data/
+2026-03-20 02:44:44,john.smith,External Drive Mount,USB_Device_28,External HDD,/media/usb9/data/
+2026-03-20 11:30:44,grace.taylor,External Drive Mount,USB_Device_33,External HDD,/media/usb2/data/
+2026-03-20 18:39:44,john.smith,USB Connect,USB_Device_10,External HDD,/media/usb3/data/
+2026-03-21 05:42:44,kate.jackson,USB Disconnect,USB_Device_55,External HDD,/media/usb1/data/
+2026-03-21 09:26:44,carol.white,External Drive Mount,USB_Device_27,CD/DVD,/media/usb8/data/
+2026-03-21 19:20:44,david.brown,External Drive Mount,USB_Device_53,USB Flash Drive,/media/usb10/data/
+2026-03-22 05:57:44,kate.jackson,USB Connect,USB_Device_62,USB Flash Drive,/media/usb8/data/
+2026-03-22 13:32:44,john.smith,USB Connect,USB_Device_28,CD/DVD,/media/usb3/data/
+2026-03-23 13:33:44,henry.anderson,USB Disconnect,USB_Device_53,SD Card,/media/usb5/data/
+2026-03-23 11:43:44,bob.wilson,External Drive Mount,USB_Device_97,SD Card,/media/usb8/data/
+2026-03-23 01:09:44,grace.taylor,USB Disconnect,USB_Device_23,SD Card,/media/usb5/data/
+2026-03-23 06:51:44,david.brown,USB Connect,USB_Device_62,USB Flash Drive,/media/usb6/data/
+2026-03-22 23:50:44,frank.miller,USB Connect,USB_Device_65,CD/DVD,/media/usb6/data/
+2026-03-23 01:37:44,kate.jackson,External Drive Mount,USB_Device_57,USB Flash Drive,/media/usb8/data/
+2026-03-23 08:06:44,kate.jackson,CD Burn,USB_Device_71,External HDD,/media/usb1/data/
+2026-03-23 18:25:44,carol.white,CD Burn,USB_Device_82,CD/DVD,/media/usb8/data/
+2026-03-23 19:22:44,emma.davis,External Drive Mount,USB_Device_68,CD/DVD,/media/usb4/data/
+2026-03-24 15:21:44,david.brown,CD Burn,USB_Device_86,External HDD,/media/usb4/data/
+2026-03-23 22:40:44,alice.johnson,External Drive Mount,USB_Device_87,SD Card,/media/usb6/data/
+2026-03-24 17:20:44,carol.white,USB Connect,USB_Device_67,External HDD,/media/usb7/data/
+2026-03-24 04:33:44,john.smith,CD Burn,USB_Device_2,External HDD,/media/usb10/data/
+2026-03-24 10:51:44,kate.jackson,External Drive Mount,USB_Device_27,CD/DVD,/media/usb10/data/
+2026-03-24 12:47:44,jack.moore,USB Connect,USB_Device_86,External HDD,/media/usb1/data/
+2026-03-24 16:51:44,frank.miller,External Drive Mount,USB_Device_79,CD/DVD,/media/usb1/data/
+2026-03-24 10:49:44,jack.moore,USB Connect,USB_Device_64,USB Flash Drive,/media/usb8/data/
+2026-03-25 14:27:44,carol.white,External Drive Mount,USB_Device_38,CD/DVD,/media/usb8/data/
+2026-03-25 01:44:44,kate.jackson,External Drive Mount,USB_Device_43,CD/DVD,/media/usb5/data/
+2026-03-25 16:34:44,bob.wilson,CD Burn,USB_Device_71,SD Card,/media/usb3/data/
+2026-03-25 13:39:44,jack.moore,External Drive Mount,USB_Device_74,CD/DVD,/media/usb10/data/
+2026-03-25 15:37:44,carol.white,USB Disconnect,USB_Device_53,SD Card,/media/usb2/data/
+2026-03-25 08:38:44,john.smith,USB Connect,USB_Device_10,USB Flash Drive,/media/usb9/data/
+2026-03-24 22:56:44,alice.johnson,CD Burn,USB_Device_36,CD/DVD,/media/usb4/data/
+2026-03-26 00:36:44,david.brown,CD Burn,USB_Device_78,CD/DVD,/media/usb3/data/
+2026-03-26 10:03:44,henry.anderson,USB Disconnect,USB_Device_87,USB Flash Drive,/media/usb7/data/
+2026-03-25 20:12:44,grace.taylor,External Drive Mount,USB_Device_33,USB Flash Drive,/media/usb1/data/
+2026-03-25 23:23:44,kate.jackson,External Drive Mount,USB_Device_80,USB Flash Drive,/media/usb1/data/
+2026-03-26 08:30:44,david.brown,External Drive Mount,USB_Device_38,External HDD,/media/usb9/data/
+2026-03-26 00:19:44,david.brown,USB Connect,USB_Device_41,External HDD,/media/usb9/data/
+2026-03-26 17:48:44,grace.taylor,CD Burn,USB_Device_2,CD/DVD,/media/usb2/data/
+2026-03-27 09:59:44,iris.thomas,USB Connect,USB_Device_12,CD/DVD,/media/usb2/data/
+2026-03-27 10:59:44,david.brown,External Drive Mount,USB_Device_16,External HDD,/media/usb7/data/
+2026-03-27 12:49:44,carol.white,USB Connect,USB_Device_82,CD/DVD,/media/usb5/data/
+2026-03-27 11:36:44,bob.wilson,USB Connect,USB_Device_39,USB Flash Drive,/media/usb10/data/
+2026-03-27 12:23:44,kate.jackson,USB Disconnect,USB_Device_58,SD Card,/media/usb9/data/
+2026-03-27 16:41:44,kate.jackson,USB Disconnect,USB_Device_76,CD/DVD,/media/usb5/data/
+2026-03-27 15:23:44,carol.white,USB Connect,USB_Device_33,SD Card,/media/usb6/data/
+2026-03-27 12:59:44,emma.davis,External Drive Mount,USB_Device_91,CD/DVD,/media/usb4/data/
+2026-03-26 23:34:44,frank.miller,CD Burn,USB_Device_24,USB Flash Drive,/media/usb6/data/
+2026-03-28 11:38:44,carol.white,CD Burn,USB_Device_43,SD Card,/media/usb8/data/
+2026-03-28 04:16:44,carol.white,USB Disconnect,USB_Device_2,USB Flash Drive,/media/usb7/data/
+2026-03-27 22:47:44,david.brown,External Drive Mount,USB_Device_60,External HDD,/media/usb5/data/
+2026-03-28 11:59:44,iris.thomas,CD Burn,USB_Device_7,External HDD,/media/usb1/data/
+2026-03-27 23:48:44,david.brown,CD Burn,USB_Device_68,USB Flash Drive,/media/usb3/data/
+2026-03-28 21:13:44,iris.thomas,USB Connect,USB_Device_76,External HDD,/media/usb3/data/
+2026-03-28 20:02:44,jack.moore,USB Connect,USB_Device_8,USB Flash Drive,/media/usb4/data/
+2026-03-29 13:30:44,emma.davis,CD Burn,USB_Device_5,CD/DVD,/media/usb7/data/
+2026-03-29 02:00:44,grace.taylor,USB Connect,USB_Device_3,External HDD,/media/usb9/data/
+2026-03-29 10:51:44,alice.johnson,External Drive Mount,USB_Device_3,SD Card,/media/usb8/data/
+2026-03-29 18:02:44,carol.white,USB Connect,USB_Device_56,CD/DVD,/media/usb3/data/
+2026-03-30 05:22:44,emma.davis,USB Connect,USB_Device_35,USB Flash Drive,/media/usb5/data/
+2026-03-30 05:54:44,grace.taylor,USB Connect,USB_Device_25,CD/DVD,/media/usb9/data/
+2026-03-30 12:30:44,kate.jackson,External Drive Mount,USB_Device_68,USB Flash Drive,/media/usb8/data/
+2026-03-31 16:56:44,iris.thomas,External Drive Mount,USB_Device_66,CD/DVD,/media/usb6/data/
+2026-03-31 10:19:44,alice.johnson,USB Disconnect,USB_Device_48,SD Card,/media/usb5/data/
+2026-03-31 14:56:44,grace.taylor,External Drive Mount,USB_Device_72,External HDD,/media/usb2/data/
+2026-03-30 22:38:44,jack.moore,CD Burn,USB_Device_47,External HDD,/media/usb4/data/
+2026-03-30 19:00:44,emma.davis,External Drive Mount,USB_Device_67,SD Card,/media/usb9/data/
+2026-03-31 12:53:44,henry.anderson,CD Burn,USB_Device_8,USB Flash Drive,/media/usb3/data/
+2026-03-31 12:55:44,jack.moore,External Drive Mount,USB_Device_72,SD Card,/media/usb9/data/
+2026-03-31 15:22:44,kate.jackson,CD Burn,USB_Device_57,USB Flash Drive,/media/usb6/data/
+2026-03-30 18:43:44,john.smith,External Drive Mount,USB_Device_69,USB Flash Drive,/media/usb10/data/
+2026-04-01 09:16:44,frank.miller,USB Disconnect,USB_Device_18,External HDD,/media/usb2/data/
+2026-04-01 04:13:44,emma.davis,USB Disconnect,USB_Device_33,USB Flash Drive,/media/usb10/data/
+2026-04-01 13:28:44,david.brown,USB Disconnect,USB_Device_82,CD/DVD,/media/usb8/data/
+2026-03-31 19:49:44,jack.moore,USB Connect,USB_Device_88,SD Card,/media/usb4/data/
+2026-03-31 19:25:44,kate.jackson,CD Burn,USB_Device_52,CD/DVD,/media/usb6/data/
+2026-04-01 06:41:44,jack.moore,USB Disconnect,USB_Device_4,USB Flash Drive,/media/usb6/data/
+2026-04-01 15:49:44,john.smith,CD Burn,USB_Device_47,USB Flash Drive,/media/usb1/data/
+2026-04-01 21:47:44,kate.jackson,USB Connect,USB_Device_81,CD/DVD,/media/usb6/data/
+2026-04-02 07:40:44,john.smith,CD Burn,USB_Device_46,CD/DVD,/media/usb8/data/
+2026-04-02 10:15:44,jack.moore,External Drive Mount,USB_Device_89,SD Card,/media/usb10/data/
+2026-04-01 19:43:44,carol.white,External Drive Mount,USB_Device_63,External HDD,/media/usb1/data/
+2026-04-02 16:34:44,david.brown,USB Disconnect,USB_Device_53,CD/DVD,/media/usb8/data/
+2026-04-02 06:11:44,frank.miller,USB Disconnect,USB_Device_94,CD/DVD,/media/usb4/data/
+2026-04-01 18:39:44,john.smith,External Drive Mount,USB_Device_86,CD/DVD,/media/usb10/data/
+2026-04-02 00:16:44,henry.anderson,USB Connect,USB_Device_41,USB Flash Drive,/media/usb1/data/
+2026-04-03 03:15:44,alice.johnson,External Drive Mount,USB_Device_41,CD/DVD,/media/usb5/data/
+2026-04-03 10:01:44,jack.moore,CD Burn,USB_Device_34,SD Card,/media/usb4/data/
+2026-04-02 23:01:44,henry.anderson,CD Burn,USB_Device_48,SD Card,/media/usb3/data/
+2026-04-02 19:49:44,jack.moore,USB Disconnect,USB_Device_2,CD/DVD,/media/usb10/data/
+2026-04-03 04:14:44,henry.anderson,External Drive Mount,USB_Device_39,USB Flash Drive,/media/usb1/data/
+2026-04-04 02:58:44,alice.johnson,USB Connect,USB_Device_46,External HDD,/media/usb4/data/
+2026-04-04 18:21:44,frank.miller,CD Burn,USB_Device_32,USB Flash Drive,/media/usb7/data/
+2026-04-04 15:24:44,carol.white,CD Burn,USB_Device_17,USB Flash Drive,/media/usb10/data/
+2026-04-05 08:23:44,john.smith,External Drive Mount,USB_Device_34,CD/DVD,/media/usb5/data/
+2026-04-05 04:05:44,john.smith,External Drive Mount,USB_Device_15,USB Flash Drive,/media/usb10/data/
+2026-04-05 03:04:44,alice.johnson,USB Disconnect,USB_Device_56,SD Card,/media/usb5/data/
+2026-04-05 17:22:44,frank.miller,External Drive Mount,USB_Device_59,USB Flash Drive,/media/usb9/data/
+2026-04-05 14:59:44,frank.miller,USB Connect,USB_Device_88,External HDD,/media/usb10/data/
+2026-04-06 06:40:44,alice.johnson,USB Disconnect,USB_Device_12,CD/DVD,/media/usb4/data/
+2026-04-05 21:33:44,carol.white,CD Burn,USB_Device_10,CD/DVD,/media/usb5/data/
+2026-04-05 19:42:44,david.brown,External Drive Mount,USB_Device_44,CD/DVD,/media/usb6/data/
+2026-04-06 01:17:44,iris.thomas,USB Connect,USB_Device_36,CD/DVD,/media/usb6/data/
+2026-04-06 11:58:44,kate.jackson,USB Disconnect,USB_Device_16,External HDD,/media/usb10/data/
+2026-04-05 19:48:44,david.brown,USB Connect,USB_Device_82,CD/DVD,/media/usb6/data/
+2026-04-06 01:33:44,frank.miller,USB Disconnect,USB_Device_83,USB Flash Drive,/media/usb5/data/
+2026-04-05 22:15:44,alice.johnson,USB Disconnect,USB_Device_86,CD/DVD,/media/usb9/data/
+2026-04-06 19:38:44,frank.miller,USB Disconnect,USB_Device_92,SD Card,/media/usb8/data/
+2026-04-07 02:24:44,grace.taylor,USB Connect,USB_Device_9,USB Flash Drive,/media/usb7/data/
+2026-04-07 06:48:44,henry.anderson,USB Disconnect,USB_Device_71,CD/DVD,/media/usb6/data/
+2026-04-07 17:40:44,grace.taylor,External Drive Mount,USB_Device_89,CD/DVD,/media/usb7/data/
+2026-04-08 17:50:44,iris.thomas,USB Disconnect,USB_Device_87,USB Flash Drive,/media/usb10/data/
+2026-04-08 13:13:44,emma.davis,USB Connect,USB_Device_60,CD/DVD,/media/usb4/data/
+2026-04-08 16:57:44,jack.moore,USB Disconnect,USB_Device_42,SD Card,/media/usb3/data/
+2026-04-08 12:23:44,iris.thomas,External Drive Mount,USB_Device_69,CD/DVD,/media/usb6/data/
+2026-04-08 03:43:44,alice.johnson,CD Burn,USB_Device_73,External HDD,/media/usb2/data/
+2026-04-08 10:14:44,emma.davis,USB Connect,USB_Device_14,SD Card,/media/usb10/data/
+2026-04-07 23:48:44,kate.jackson,USB Connect,USB_Device_1,CD/DVD,/media/usb1/data/
+2026-04-08 15:51:44,henry.anderson,USB Disconnect,USB_Device_99,CD/DVD,/media/usb7/data/
+2026-04-08 16:52:44,david.brown,USB Connect,USB_Device_34,CD/DVD,/media/usb3/data/

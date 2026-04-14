@@ -1,0 +1,13 @@
+user_id,name,email,role,department,start_date
+U1000,John Smith,john.smith@company.com,Admin,HR,2023-09-15
+U1001,Alice Johnson,alice.johnson@company.com,User,Security,2025-10-02
+U1002,Bob Wilson,bob.wilson@company.com,IT Support,Operations,2023-10-07
+U1003,Carol White,carol.white@company.com,Developer,Research,2023-08-16
+U1004,David Brown,david.brown@company.com,Manager,HR,2024-06-20
+U1005,Emma Davis,emma.davis@company.com,Developer,Engineering,2024-02-23
+U1006,Frank Miller,frank.miller@company.com,Developer,Research,2025-03-26
+U1007,Grace Taylor,grace.taylor@company.com,Analyst,Research,2023-08-12
+U1008,Henry Anderson,henry.anderson@company.com,Manager,Security,2024-04-25
+U1009,Iris Thomas,iris.thomas@company.com,IT Support,HR,2025-05-07
+U1010,Jack Moore,jack.moore@company.com,Analyst,Security,2025-07-15
+U1011,Kate Jackson,kate.jackson@company.com,Admin,HR,2024-02-26

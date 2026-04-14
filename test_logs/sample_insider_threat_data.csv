@@ -1,0 +1,9 @@
+timestamp,user,department,role,event_type,details
+2023-10-27T10:00:00,User_1,Engineering,Engineer,login,Successful login from known IP
+2023-10-27T10:05:00,User_1,Engineering,Engineer,file_access,Accessed /confidential/source_code.py
+2023-10-27T11:15:00,User_2,HR,Recruiter,email,Sent 50MB attachment to external domain
+2023-10-27T11:20:00,User_2,HR,Recruiter,usb_connect,Connected unauthorized USB mass storage
+2023-10-27T12:00:00,User_3,Finance,Analyst,login,Failed login attempt 1
+2023-10-27T12:01:00,User_3,Finance,Analyst,login,Failed login attempt 2
+2023-10-27T12:05:00,User_3,Finance,Analyst,login,Successful login from offshore VPN
+2023-10-27T12:15:00,User_3,Finance,Analyst,file_access,Mass download of /finance/Q3_reports.pdf
