@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from sklearn.ensemble import IsolationForest
 
 def train_isolation_forest(X: pd.DataFrame) -> IsolationForest:
@@ -14,6 +15,7 @@ def predict_isolation_forest(model: IsolationForest, X: pd.DataFrame) -> pd.Seri
     """
     Returns anomaly scores from the IF model.
     In sklearn, negative scores are anomalies. We invert and normalize to 0-1 range.
+    Returns numpy array for consistency with ensemble.
     """
     # smaller scores are more anomalous. We'll invert them for risk representation
     scores = model.decision_function(X)
@@ -29,4 +31,4 @@ def predict_isolation_forest(model: IsolationForest, X: pd.DataFrame) -> pd.Seri
     else:
         normalized_scores = inverted_scores * 0.0
         
-    return normalized_scores
+    return np.asarray(normalized_scores)  # Return numpy array for consistency

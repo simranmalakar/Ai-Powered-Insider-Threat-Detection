@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import layers, models
+import tensorflow.keras
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -13,28 +13,34 @@ AUTOENCODER_HISTORY = {
     'drift_threshold': 0.10  # 10% increase in reconstruction error indicates drift
 }
 
-def build_autoencoder(input_dim: int) -> models.Model:
+def build_autoencoder(input_dim: int) -> tensorflow.keras.models.Model:
     """
     Builds an Autoencoder neural network model for anomaly detection.
+    Architecture scales proportionally to input dimension.
     """
+    # Dynamic layer sizes based on input_dim (scales for 6 features or 25 features)
+    enc1 = max(32, input_dim * 2)   # First hidden: 2x input
+    enc2 = max(16, input_dim)        # Second hidden: 1x input
+    bottleneck_dim = max(6, input_dim // 3)  # Bottleneck: ~3x compression
+
     # Encoder
-    input_layer = layers.Input(shape=(input_dim,))
-    encoder = layers.Dense(16, activation='relu')(input_layer)
-    encoder = layers.Dense(8, activation='relu')(encoder)
+    input_layer = tensorflow.keras.layers.Input(shape=(input_dim,))
+    encoder = tensorflow.keras.layers.Dense(enc1, activation='relu')(input_layer)
+    encoder = tensorflow.keras.layers.Dense(enc2, activation='relu')(encoder)
     
     # Bottleneck
-    bottleneck = layers.Dense(4, activation='relu')(encoder)
+    bottleneck = tensorflow.keras.layers.Dense(bottleneck_dim, activation='relu')(encoder)
     
-    # Decoder
-    decoder = layers.Dense(8, activation='relu')(bottleneck)
-    decoder = layers.Dense(16, activation='relu')(decoder)
-    output_layer = layers.Dense(input_dim, activation='sigmoid')(decoder)
+    # Decoder (mirror of encoder)
+    decoder = tensorflow.keras.layers.Dense(enc2, activation='relu')(bottleneck)
+    decoder = tensorflow.keras.layers.Dense(enc1, activation='relu')(decoder)
+    output_layer = tensorflow.keras.layers.Dense(input_dim, activation='sigmoid')(decoder)
     
-    autoencoder = models.Model(inputs=input_layer, outputs=output_layer)
+    autoencoder = tensorflow.keras.models.Model(inputs=input_layer, outputs=output_layer)
     autoencoder.compile(optimizer='adam', loss='mse')
     return autoencoder
 
-def train_autoencoder(X: pd.DataFrame, existing_model=None, epochs=20, batch_size=32) -> models.Model:
+def train_autoencoder(X: pd.DataFrame, existing_model=None, epochs=20, batch_size=32) -> tensorflow.keras.models.Model:
     """
     Trains or updates the autoencoder model incrementally with concept drift detection (Priority 3).
     """
@@ -42,10 +48,16 @@ def train_autoencoder(X: pd.DataFrame, existing_model=None, epochs=20, batch_siz
     X_max = X.max()
     
     if existing_model is not None:
-        model = existing_model
-        # Continual learning: update scaling bounds
-        X_min = np.minimum(model.X_min, X_min)
-        X_max = np.maximum(model.X_max, X_max)
+        # Guard: if feature count changed, discard old model and rebuild
+        expected_dim = existing_model.input_shape[-1]
+        if expected_dim != X.shape[1]:
+            print(f"[AUTOENCODER] Feature count changed ({expected_dim} → {X.shape[1]}). Rebuilding model.")
+            model = build_autoencoder(X.shape[1])
+        else:
+            model = existing_model
+            # Continual learning: update scaling bounds
+            X_min = np.minimum(model.X_min, X_min)
+            X_max = np.maximum(model.X_max, X_max)
     else:
         model = build_autoencoder(X.shape[1])
         
@@ -64,7 +76,7 @@ def train_autoencoder(X: pd.DataFrame, existing_model=None, epochs=20, batch_siz
     model.X_max = X_max
     return model
 
-def predict_autoencoder(model: models.Model, X: pd.DataFrame) -> np.ndarray:
+def predict_autoencoder(model: tensorflow.keras.models.Model, X: pd.DataFrame) -> np.ndarray:
     """
     Computes reconstruction error (MSE) as anomaly score.
     Higher error = more anomalous.
@@ -97,5 +109,5 @@ def predict_autoencoder(model: models.Model, X: pd.DataFrame) -> np.ndarray:
         normalized_error = (mse - min_mse) / (max_mse - min_mse)
     else:
         normalized_error = mse * 0.0
-        
+    
     return normalized_error
