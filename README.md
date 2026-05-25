@@ -2,6 +2,15 @@
 This project presents an advanced insider threat detection system that combines continual learning, anomaly detection, explainable AI, and graph-based analytics to identify suspicious user behavior in real time.
 By leveraging state-of-the-art machine learning techniques including **Isolation Forests** and **Autoencoders**, alongside transparent **SHAP (SHapley Additive exPlanations)** explainability, this tool aims to spot lateral movement, data exfiltration, and compromised credentials before significant damage occurs.
 
+
+<img width="1904" height="918" alt="Screenshot 2026-04-09 200619" src="https://github.com/user-attachments/assets/9bee90f8-645f-479c-9392-030e6caef9fc" />
+<img width="1913" height="955" alt="Screenshot 2026-04-09 200609" src="https://github.com/user-attachments/assets/4e3f897c-ebbb-4a4a-9602-64f8689928ff" />
+
+<img width="1914" height="921" alt="Screenshot 2026-04-09 200628" src="https://github.com/user-attachments/assets/25b112d4-efb5-4d7b-aff7-54b4485b49cd" />
+<img width="1886" height="926" alt="Screenshot 2026-04-09 200658" src="https://github.com/user-attachments/assets/10b0cd70-5d1a-4b19-b6cd-04ec4f98d1df" />
+<img width="1866" height="897" alt="Screenshot 2026-04-09 200726" src="https://github.com/user-attachments/assets/f48cf19f-2788-4cef-9391-12516ed1a21b" />
+
+
 ## 🌟 Key Features
 
 1. **Dashboard Overview**: Highly visual command center summarizing active anomalies, risk scores, and system health metrics.
