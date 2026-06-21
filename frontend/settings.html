@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - AI Insider Threat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <script src="js/theme.js?v=3"></script>
+    <style>
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .settings-card {
+            background: var(--panel-bg);
+            border: var(--glass-border);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .settings-header {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: var(--glass-border);
+            padding-bottom: 12px;
+        }
+
+        .setting-group {
+            margin-bottom: 20px;
+        }
+
+        .setting-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .setting-label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        /* Toggle Switch */
+        .toggle-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: .3s;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--text-secondary);
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
+            background-color: white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Slider Input */
+        .range-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            outline: none;
+            margin-top: 5px;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
+        .slider-val {
+            float: right;
+            font-size: 13px;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Input field */
+        .input-text {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .input-text:focus {
+            border-color: var(--accent-color);
+        }
+
+        .save-bar {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2 id="sidebar-name">Admin<span class="highlight">User</span></h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="upload.html" class="nav-item"><i class="fa-solid fa-file-csv"></i> Upload Data</a>
+                <a href="threat_intel.html" class="nav-item"><i class="fa-solid fa-user-secret"></i> Threat Intel</a>
+                <a href="relationships.html" class="nav-item"><i class="fa-solid fa-network-wired"></i>
+                    Relationships</a>
+                <a href="settings.html" class="nav-item active"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="controls">
+                <button class="btn-primary" onclick="window.location.href='index.html'">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="hamburger" id="mobile-menu-btn"
+                    onclick="document.querySelector('.sidebar').classList.toggle('active')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="header-titles">
+                    <h1>System Configuration</h1>
+                    <p>Manage ML pipelines, user profile, and global detection parameters</p>
+                </div>
+                <div class="user-profile" style="display: flex; align-items: center; gap: 15px;">
+                    <button id="theme-toggler" class="btn-icon" title="Toggle Light/Dark Mode" style="font-size: 20px;">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="profile.html">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff" alt="Profile"
+                            class="avatar" id="global-avatar">
+                    </a>
+                </div>
+            </header>
+
+            <section class="settings-grid">
+                <!-- User Profile Settings -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <i class="fa-solid fa-user-gear" style="color: var(--accent-color);"></i> User Profile
+                    </div>
+                    <div class="setting-group">
+                        <span class="setting-label">Display Name</span>
+                        <input type="text" id="setting-username" class="input-text" placeholder="Enter your name">
+                        <div style="font-size: 11px; color: var(--text-secondary); margin-top: 6px;">
+                            This name will be used in the sidebar and profile headers.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Pipeline Settings -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <i class="fa-solid fa-brain" style="color: var(--accent-color);"></i> Machine Learning Pipeline
+                    </div>
+
+                    <div class="setting-group toggle-row">
+                        <div>
+                            <span class="setting-label" style="margin-bottom: 2px;">Isolation Forest Engine</span>
+                            <span style="font-size: 11px; color: var(--text-secondary);">Unsupervised density-based
+                                anomaly detection</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="ml-if-enabled" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-group toggle-row">
+                        <div>
+                            <span class="setting-label" style="margin-bottom: 2px;">Autoencoder Engine</span>
+                            <span style="font-size: 11px; color: var(--text-secondary);">TensorFlow reconstruction error evaluation</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="ml-ae-enabled" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-group" style="margin-top: 24px;">
+                        <span class="setting-label">Critical Anomaly Threshold <span class="slider-val" id="val-thresh">0.80</span></span>
+                        <input type="range" id="ml-threshold" class="range-slider" min="0" max="1" step="0.01" value="0.80"
+                            oninput="document.getElementById('val-thresh').innerText = this.value">
+                        <div style="font-size: 11px; color: var(--text-secondary); margin-top: 6px;">
+                            Events scoring above this threshold will trigger immediate alerts.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integration Settings -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <i class="fa-solid fa-plug" style="color: var(--success);"></i> Data Integrations
+                    </div>
+
+                    <div class="setting-group">
+                        <span class="setting-label">Active Directory Sync URL</span>
+                        <input type="text" class="input-text" placeholder="ldaps://ad.company.local:636"
+                            value="ldaps://internal-ad.company.net">
+                    </div>
+
+                    <div class="setting-group">
+                        <span class="setting-label">Splunk Forwarder Index</span>
+                        <input type="text" class="input-text" placeholder="e.g. idx_insider_logs"
+                            value="idx_sec_events">
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="settings-card">
+                    <div class="settings-header">
+                        <i class="fa-solid fa-bell" style="color: var(--danger);"></i> Alerting & Explainability
+                    </div>
+                    <div class="setting-group toggle-row">
+                        <div>
+                            <span class="setting-label" style="margin-bottom: 2px;">Auto-generate XAI Explanations</span>
+                            <span style="font-size: 11px; color: var(--text-secondary);">Generate visual SHAP/LIME importance</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-group toggle-row">
+                        <div>
+                            <span class="setting-label" style="margin-bottom: 2px;">SOC Slack Integration</span>
+                            <span style="font-size: 11px; color: var(--text-secondary);">Alert priority channels on critical risks</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <div class="save-bar">
+                <button class="btn-outline" style="width: auto; padding: 12px 32px;" onclick="window.location.reload()">Cancel</button>
+                <button class="btn-primary" style="width: auto; padding: 12px 32px;" onclick="saveConfig(this)">
+                    <i class="fa-solid fa-check"></i> Save Configuration
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load Saved Profile Name
+            const savedName = localStorage.getItem('userName') || 'Admin User';
+            document.getElementById('setting-username').value = savedName;
+            updateProfileUI(savedName);
+
+            // Load saved thresholds (if any)
+            const savedThreshold = localStorage.getItem('ml_threshold');
+            if (savedThreshold) {
+                document.getElementById('ml-threshold').value = savedThreshold;
+                document.getElementById('val-thresh').innerText = savedThreshold;
+            }
+        });
+
+        function updateProfileUI(name) {
+            const sidebarName = document.getElementById('sidebar-name');
+            const globalAvatar = document.getElementById('global-avatar');
+            
+            if (sidebarName) {
+                sidebarName.innerHTML = `${name}<span class="highlight">AI</span>`;
+            }
+            if (globalAvatar) {
+                globalAvatar.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0D8ABC&color=fff`;
+            }
+        }
+
+        function saveConfig(btn) {
+            const newName = document.getElementById('setting-username').value.trim();
+            const threshold = document.getElementById('ml-threshold').value;
+
+            if (newName) {
+                localStorage.setItem('userName', newName);
+                updateProfileUI(newName);
+            }
+            localStorage.setItem('ml_threshold', threshold);
+
+            // UI Feedback
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Configuration Saved!';
+            btn.style.background = 'var(--success)';
+            btn.style.borderColor = 'var(--success)';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = 'var(--accent-color)';
+                btn.style.borderColor = 'var(--accent-color)';
+            }, 2500);
+        }
+    </script>
+</body>
+
+</html>

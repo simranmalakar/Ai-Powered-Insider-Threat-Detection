@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insider Threat Detection</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <script src="js/theme.js?v=3"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2 id="sidebar-name">Admin<span class="highlight">User</span></h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="upload.html" class="nav-item"><i class="fa-solid fa-file-csv"></i> Upload Data</a>
+                <a href="threat_intel.html" class="nav-item"><i class="fa-solid fa-user-secret"></i> Threat Intel</a>
+                <a href="relationships.html" class="nav-item"><i class="fa-solid fa-network-wired"></i>
+                    Relationships</a>
+                <a href="settings.html" class="nav-item"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="controls">
+                <p class="status-text" id="sim-status">System Standby</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="hamburger" id="mobile-menu-btn"
+                    onclick="document.querySelector('.sidebar').classList.toggle('active')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="header-titles">
+                    <h1>AI-Powered Insider Threat Detection System</h1>
+                    <p>Powered by LLM, Autoencoder & Isolation Forest</p>
+                </div>
+                <div class="user-profile" style="display: flex; align-items: center; gap: 15px;">
+                    <button id="theme-toggler" class="btn-icon" title="Toggle Light/Dark Mode" style="font-size: 20px;">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="profile.html">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff" alt="Profile"
+                            class="avatar" id="global-avatar">
+                    </a>
+                </div>
+            </header>
+
+            <!-- Metrics -->
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-server"></i></div>
+                    <div class="metric-info">
+                        <h3>Events Monitored</h3>
+                        <p id="stat-total">0</p>
+                    </div>
+                </div>
+                <div class="metric-card danger">
+                    <div class="metric-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="metric-info">
+                        <h3>Critical Anomalies</h3>
+                        <p id="stat-anomalies">0</p>
+                    </div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="metric-info">
+                        <h3>Detection Precision</h3>
+                        <p id="stat-precision">0%</p>
+                    </div>
+                </div>
+                <div class="metric-card info">
+                    <div class="metric-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div class="metric-info">
+                        <h3>Recall </h3>
+                        <p id="stat-recall">0%</p>
+                    </div>
+                </div>
+                <div class="metric-card purple">
+                    <div class="metric-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="metric-info">
+                        <h3>F1-Score</h3>
+                        <p id="stat-f1">0%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metrics Note (Clarifies simulated metrics) -->
+            <div id="metrics-note" style="display:none; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; color: var(--text-primary); padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 13px;">
+            </div>
+
+            <!-- Lower Section: Graph & Table -->
+            <section class="content-grid">
+
+                <!-- Anomaly List -->
+                <div class="panel list-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-list-ol"></i> Detected Anomalies</h2>
+                        <span class="badge" id="badge-count">0 threats</span>
+                    </div>
+                    <div class="table-container">
+                        <table class="anomaly-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>User</th>
+                                    <th>Event</th>
+                                    <th>Risk Score</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="anomaly-tbody">
+                                <!-- Data populated via JS -->
+                                <tr>
+                                    <td colspan="5" style="text-align: center; color: #888;">No Data. Run simulation to
+                                        begin.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Behavioral Graph -->
+                <div class="panel graph-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-diagram-project"></i> Behavioral Entity Graph</h2>
+                        <button id="btn-refresh-graph" class="btn-icon" title="Refresh Graph"><i
+                                class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                    <div class="graph-container">
+                        <iframe id="graph-iframe" src="" frameborder="0" width="100%" height="100%"></iframe>
+                        <div id="graph-placeholder" class="placeholder">
+                            <i class="fa-solid fa-project-diagram fa-3x"></i>
+                            <p>Graph visualization will appear here.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- No Data Modal -->
+    <div id="no-data-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 500px; text-align: center; padding: 40px;">
+            <i class="fa-solid fa-cloud-arrow-up fa-4x" style="color: var(--accent-color); margin-bottom: 20px;"></i>
+            <h2>No Dataset Detected</h2>
+            <p style="color: var(--text-secondary); margin: 15px 0 25px;">The machine learning pipeline requires logs to
+                analyze. Please upload your CSV dataset to generate the threat intelligence report.</p>
+            <a href="upload.html" class="btn-primary"
+                style="display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none;"><i
+                    class="fa-solid fa-file-csv"></i> Upload Data Now</a>
+            <br><br>
+            <button class="btn-secondary" onclick="document.getElementById('no-data-modal').classList.remove('show')"
+                style="background: transparent; border: 1px solid var(--border-color); color: var(--text-color); padding: 8px 16px; border-radius: 8px; cursor: pointer;">Dismiss</button>
+        </div>
+    </div>
+
+    <!-- XAI Modal -->
+    <div id="shap-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 800px; width: 90%;">
+            <span class="close-btn"
+                onclick="document.getElementById('shap-modal').classList.remove('show')">&times;</span>
+            <h2><i class="fa-solid fa-brain"></i> XAI Explanations</h2>
+            <p>Feature contributions affecting the anomaly score.</p>
+
+            <div style="display: flex; gap: 32px; width: 100%; margin-top: 20px;">
+                <div style="flex: 1;">
+                    <h3
+                        style="margin-bottom: 12px; font-size: 14px; text-transform: uppercase; color: var(--text-secondary);">
+                        SHAP Analysis</h3>
+                    <div id="shap-chart-container" class="shap-chart-container">
+                        <!-- Bars injected via JS -->
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <h3
+                        style="margin-bottom: 12px; font-size: 14px; text-transform: uppercase; color: var(--text-secondary);">
+                        LIME Analysis</h3>
+                    <div id="lime-chart-container" class="shap-chart-container">
+                        <!-- Bars injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Forensic Assistant -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <h3><i class="fa-solid fa-robot"></i> SentinelAI Assistant</h3>
+            <button class="btn-icon" id="close-chat" style="color: #000;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message ai">
+                Hello Agent. I am SentinelAI. I have analyzed the current behavioral logs. You can ask me for a system summary or details about specific users.
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask about threats or users...">
+            <button class="btn-icon" id="send-chat" style="color: var(--accent-color);"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <button class="chat-toggle-btn" id="chat-toggle">
+        <i class="fa-solid fa-comment-dots"></i>
+    </button>
+
+    <script src="js/app.js?v=9"></script>
+
+</body>
+
+</html>
